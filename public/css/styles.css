@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+}
+
+#container {
+  background-image: url(../images/sky.jpg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#road-container {
+  height: 100%;
+  width: 100%;
+
+  animation: car-move 2.5s linear infinite;
+}
+
+#road1 img {
+  width: 50%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+#road2 img {
+  width: 50%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+#road3 img {
+  width: 50%;
+  position: fixed;
+  bottom: 0;
+  left: 100%;
+}
+
+#road4 img {
+  width: 50%;
+  position: fixed;
+  bottom: 0;
+  right: -100%;
+}
+
+#car-body img {
+  width: 50%;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+
+  animation: jump 1s linear infinite;
+}
+
+#front-tyre img {
+  width: 6.25%;
+  position: absolute;
+  bottom: 10%;
+  left: 52%;
+
+  animation: rotate 1s linear infinite;
+}
+
+#back-tyre img {
+  width: 6.25%;
+  position: absolute;
+  bottom: 10%;
+  left: 23%;
+
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 3600deg;
+  }
+}
+
+@keyframes jump {
+  0% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 2.5%;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+
+@keyframes car-move {
+  100% {
+    translate: -100% 0;
+  }
+}
